@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing page personal de un informático especializado en ciberseguridad">
+    <title>👋 Mario Álvarez Ferńandez</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+
+    <!-- Video de fondo -->
+    <section class="hero">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#about-me">Sobre mí</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#projects">Mis Proyectos</a></li>
+                    <li><a href="#social-media">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <video autoplay muted loop id="bg-video" playsinline>
+            <source src="presentacion.mp4" type="video/mp4">
+            <source src="presentacion.webm" type="video/webm">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+
+        <!-- Contenido de la hero -->
+        <div class="hero-content">
+            <h1>Hola, soy Mario</h1>
+            <h2>Informático especializado en Ciberseguridad y Docencia</h2>
+            <p id="dynamic-text">Auditorías de ciberseguridad.</p>
+            <a href="#skills" class="cta-button">¿Cómo te puedo ayudar?</a>
+        </div>
+    </section>
+
+    <section id="about-me">
+        <h2>Sobre mí</h2>
+        <p>Soy un informático freelance especializado en ciberseguridad y la docencia.</p>
+        <p>Mi experiencia incluye una amplia gama de habilidades y conocimientos en la informática.</p>
+        <p>No dudes en <a href="https://www.linkedin.com/in/maalfer1" target="_blank" style="font-weight: bold; color: white; text-decoration: none;">contactar</a>.</p>
+        <a href="https://www.youtube.com/@ElPinguinoDeMario" class="cta-button" target="_blank">
+            <i class="bi bi-youtube"></i> Conóceme
+        </a>
+    </section>
+
+    <section id="skills">
+        <h2>Habilidades</h2>
+        <div class="skills-grid">
+            <div class="skill-item" data-skill="Ciberseguridad / Hacking Ético">
+                <h3>Ciberseguridad / Hacking Ético</h3>
+                <p>Identificando vulnerabilidades y brechas en sistemas de seguridad.</p>
+                <a href="#" class="cta-button">Más información</a>
+            </div>
+            <div class="skill-item" data-skill="Docencia">
+                <h3>Docencia</h3>
+                <p>Protección de la integridad y confidencialidad de la información.</p>
+                <a href="#" class="cta-button">Más información</a>
+            </div>
+            <div class="skill-item" data-skill="Programación">
+                <h3>Programación</h3>
+                <p>Despliegue y configuración de sistemas avanzados de defensa.</p>
+                <a href="#" class="cta-button">Más información</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Popup modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h3 id="popup-title"></h3>
+            <p id="popup-text"></p>
+        </div>
+    </div>
+    
+    
+
+    <section id="about">
+        <h2>Mis Servicios</h2>
+        <div class="services-list">
+            <div class="service-item" data-delay="0">
+                <h3>Securización de Servidores</h3>
+                <p>Protección avanzada de servidores contra ataques y vulnerabilidades.</p>
+            </div>
+            <div class="service-item" data-delay="0.2s">
+                <h3>Desarrollo Web</h3>
+                <p>Creación de sitios web seguros, eficientes y escalables.</p>
+                <p>Securización y mantenimiento tanto del VPS como del servidor web.</p>
+            </div>
+            <div class="service-item" data-delay="0.4s">
+                <h3>Docencia de informática</h3>
+                <p>Clases de programación, ciberseguridad, bases de datos y demás materias para todos los niveles.</p>
+                <p>Servicios de docencia para empresas o instituciones educativas.</p>
+            </div>
+            <div class="service-item" data-delay="0.6s">
+                <h3>Linux y Sistemas Operativos</h3>
+                <p>Administración, instalación y optimización de sistemas Linux.</p>
+            </div>
+            <div class="service-item" data-delay="0.8s">
+                <h3>Asesoría en Informática General</h3>
+                <p>Soporte y soluciones tecnológicas adaptadas a tus necesidades.</p>
+            </div>
+    </section>
+
+    <section id="seccion-galeria">
+        <div class="image-gallery">
+            <div class="visible-images">
+                <img src="images/python.webp" alt="Imagen 1">
+                <img src="images/bash.png" alt="Imagen 2">
+                <img src="images/kali.png" alt="Imagen 3">
+                <img src="images/js.png" alt="Imagen 4">
+                <img src="images/secure.png" alt="Imagen 5">
+                <img src="images/java.webp" alt="Imagen 1">
+                <img src="images/sql.png" alt="Imagen 2">
+                <img src="images/tux.webp" alt="Imagen 3">
+                <img src="images/mongo.svg" alt="Imagen 4">
+                <img src="images/redes.png" alt="Imagen 5">
+                <img src="images/html.png" alt="Imagen 1">
+                <img src="images/css.png" alt="Imagen 2">
+                <img src="images/docker.webp" alt="Imagen 3">
+                <img src="images/js.png" alt="Imagen 4">
+                <img src="images/secure.png" alt="Imagen 5">
+                <img src="images/python.webp" alt="Imagen 1">
+                <img src="images/bash.png" alt="Imagen 2">
+                <img src="images/kali.png" alt="Imagen 3">
+                <img src="images/js.png" alt="Imagen 4">
+                <img src="images/secure.png" alt="Imagen 5">
+                <img src="images/kali.png" alt="Imagen 3">
+                <img src="images/js.png" alt="Imagen 4">
+                <img src="images/secure.png" alt="Imagen 5">
+                
+            </div>
+        </div>            
+    </div>
+    </section>
+    
+    
+
+    <section id="projects">
+        <h2>Mis Proyectos</h2>
+        <div class="projects-grid">
+            <div class="project-item">
+                <h3>Dockerlabs</h3>
+                <p>Plataforma donde se alojan laboratorios vulnerables hechos en docker para practicar hacking ético con el menor consumo de recursos posibles.</p>
+                <br>
+                <a href="https://dockerlabs.es" target="_blank">
+                    <img src="images/ballena.jpg" alt="Proyecto 1" class="project-img">
+                </a>
+                          
+            </div>
+            <div class="project-item">
+                <h3>El Pingüino de Mario</h3>
+                <p>Canal de YouTube donde se imparte formación sobre informática, programación y sobre todo ciberseguridad y hacking ético, entre otras cosas.</p>
+                <br>
+                <a href="https://www.youtube.com/@ElPinguinoDeMario/" target="_blank">
+                    <img src="images/pinguino.png" alt="Proyecto 1" class="project-img">
+                </a>
+            </div>
+            <div class="project-item">
+                <h3>El Rincón del Hacker</h3>
+                <p>Academia especializada en la ciberseguridad donde se enseña desde cero y paso a paso, así como la impartición de otras materias relacionadas.</p>
+                <br>
+                <a href="https://elrincondelhacker.es" target="_blank">
+                    <img src="images/academia.png" alt="Proyecto 1" class="project-img">
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="social-media">
+        <h3>Sígueme en mis redes sociales</h3>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="mailto:marioalvarezfdz@gmail.com" class="social-icon">
+                <i class="bi bi-envelope"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+                <i class="bi bi-tiktok"></i>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" class="social-icon">
+                <i class="bi bi-youtube"></i>
+            </a>
+            <a href="https://x.com" target="_blank" class="social-icon">
+                <i class="bi bi-x"></i>
+            </a>
+        </div>
+    </section>
+    
+    <footer class="text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 text-start">
+                    <p>&copy; 2024 - Todos los derechos reservados</p>
+                </div>
+                
+                <div class="col-4 text-end">
+                    <p style="color: white; font-weight: bold;">
+			  Powered By 
+			  <a href="https://www.linkedin.com/in/maalfer1" target="_blank" rel="noopener noreferrer" style="color: white; font-weight: bold;">
+			    El Pingüino de Mario
+			  </a>
+		    </p>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- Efecto de olas -->
+        <div class="wave-container">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+        </div>
+    </footer>
+    
+    <script src="scripts/script.js"></script>
+    <script src="scripts/imagenes.js"></script>
+    <script src="scripts/popup.js"></script>
+
+</body>
+</html>

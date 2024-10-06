@@ -1,0 +1,672 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Estilos para el header */
+header {
+    background-color: rgba(0, 0, 0, 0); /* Fondo completamente transparente */
+    padding: 5px;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: transform 0.3s ease; /* Transición para suavizar el ocultamiento/mostrado */
+}
+
+nav {
+    text-align: left; /* Alinea el contenido del nav a la izquierda */
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Alinea los elementos de la lista en una línea */
+}
+
+nav ul li {
+    margin-right: 20px; /* Espacio entre los enlaces */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilos para la hero section */
+.hero {
+    position: relative;
+    height: 100vh; /* La sección ocupe toda la altura de la pantalla */
+    overflow: hidden; /* Evitamos el desbordamiento del contenido */
+    color: #fff;
+    text-align: center;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Aseguramos que el video cubra todo el fondo */
+    filter: brightness(0.5); /* Oscurece el video para mejorar la legibilidad del texto */
+    pointer-events: none; /* Evitamos que el video interfiera con los clics */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el contenido vertical y horizontalmente */
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0); /* Fondo completamente transparente */
+    border-radius: 10px; /* Agrega bordes redondeados para el contenedor */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #f0b700;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 10px; /* Espacio alrededor del botón */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Añade transición suave para el zoom y el cambio de color */
+}
+
+.cta-button:hover {
+    background-color: #0096c7;
+    transform: scale(1.05); /* Aplica el efecto de zoom */
+}
+
+
+/* Estilos para la sección "About" */
+#about {
+    position: relative;
+    padding: 50px;
+    background-color: #333; /* Fondo más oscuro para la sección */
+    color: #fff; /* Color del texto blanco para contraste */
+}
+
+/* Añade un color de fondo semitransparente para mejorar la legibilidad del texto */
+#about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Overlay más oscuro para mejorar la legibilidad */
+    z-index: 1;
+}
+
+#about h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 2.5em; /* Aumenta el tamaño del título para mejorar la visibilidad */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Añade sombra al texto para mejorar la legibilidad */
+}
+
+#about .profile-img {
+    position: relative;
+    z-index: 2;
+    max-width: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+    filter: sepia(20%) blur(2px);
+}
+
+#about .services-list {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre los elementos de servicio */
+    justify-content: center; /* Centra los elementos de servicio horizontalmente */
+}
+
+#about .service-item {
+    position: relative;
+    background-color: rgba(62, 62, 59, 0.8); /* Fondo oscuro semitransparente */
+    color: #fff; /* Color del texto blanco para contraste */
+    padding: 20px; /* Espacio interno de las cartas */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto de profundidad */
+    width: 30%; /* Ajusta el ancho según sea necesario */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transiciones suaves */
+    text-align: center; /* Alinea el texto al centro */
+    opacity: 1; /* Inicialmente invisibles */
+    transform: translateY(20px); /* Desplazadas hacia abajo */
+}
+
+/* Efecto de zoom al pasar el cursor */
+#about .service-item:hover {
+    transform: translateY(0) scale(1.05); /* Vuelve a la posición original y aumenta el tamaño */
+    opacity: 1; /* Se vuelve visible */
+}
+
+
+#about .service-icon {
+    max-width: 80px; /* Tamaño fijo para los íconos de servicio */
+    margin-bottom: 10px; /* Espacio entre el ícono y el texto */
+}
+
+/* Estilos para el título de cada carta */
+#about .service-item h3 {
+    margin-top: 10px; /* Espacio superior para el título */
+    margin-bottom: 10px; /* Espacio inferior para el título */
+    font-size: 1.5em; /* Tamaño de fuente para el título */
+}
+
+/* Estilos para la descripción en cada carta */
+#about .service-item p {
+    font-size: 1em; /* Tamaño de fuente para la descripción */
+    line-height: 1.5; /* Espacio entre líneas para mejorar la legibilidad */
+}
+
+
+#seccion-galeria {
+    position: relative;
+    padding: 50px;
+    background-color: #1b1b1b; /* Fondo más oscuro para la sección */
+}
+
+.image-gallery {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+
+#about-me {
+    padding: 100px; /* Aumenta el padding superior e inferior */
+    height: 600px; /* Ajusta la altura total de la sección */
+    background-image: url('images/yo3.JPG'); /* Agrega la imagen de fondo */
+    background-size: cover; /* La imagen cubrirá toda la sección */
+    background-position: 0px center; /* Mueve la imagen 100 píxeles hacia la izquierda */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: relative; /* Permite usar un overlay */
+    color: #f9f9f9; /* Color del texto claro */
+    text-align: left;
+}
+
+
+#about-me::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Degradado oscuro sobre la imagen */
+    z-index: 1; /* Capa por encima de la imagen */
+}
+
+#about-me h2, #about-me p, #about-me .cta-button {
+    position: relative;
+    z-index: 2; /* Asegura que el texto esté por encima del overlay */
+}
+
+#about-me h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#about-me p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#about-me .cta-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #f7c600; /* Color amarillo para el botón */
+    color: #333; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#about-me .cta-button i {
+    margin-right: 8px;
+    font-size: 1.5em;
+}
+
+#about-me .cta-button:hover {
+    background-color: #f0b700; /* Amarillo más oscuro al pasar el cursor */
+    transform: scale(1.05);
+}
+
+
+
+.visible-images {
+    display: flex;
+    animation: slide 60s linear infinite; /* Ajusta la duración para controlar la velocidad */
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-25%); /* Desplaza a la izquierda la mitad del ancho total */
+    }
+}
+
+.visible-images img {
+    width: 2%; /* Ajusta el tamaño de las imágenes */
+    flex-shrink: 0; /* Evita que las imágenes se reduzcan */
+}
+
+
+
+
+
+
+
+
+/* Estilos para la sección "Projects" */
+
+#projects {
+    padding: 50px;
+    background-color: #222; /* Fondo oscuro para la sección */
+}
+
+#projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #f9f9f9; /* Color del texto del título claro */
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: #f9f9f9; /* Color del texto del título claro */
+}
+
+.project-item {
+    text-align: center;
+    background-color: #333; /* Fondo oscuro para los elementos del proyecto */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    width: 30%;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5); /* Aumenta la sombra para destacar el efecto de zoom */
+}
+
+
+
+
+/* Estilos para las secciones */
+section {
+    padding: 50px;
+    background-color: #fff;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    max-width: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+    filter: sepia(20%) blur(2px);
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre los elementos de servicio */
+    justify-content: center; /* Centra los elementos de servicio horizontalmente */
+}
+
+.service-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.service-icon {
+    max-width: 80px; /* Tamaño fijo para los íconos de servicio */
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #2b2412;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    max-width: 600px;
+}
+
+.popup-content p {
+    white-space: pre-line;
+}
+
+
+.close-button {
+    color: #222;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+#skills {
+    padding: 50px;
+    background-color: #222; /* Fondo oscuro para la sección */
+    color: #f9f9f9; /* Color del texto claro */
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #333; /* Fondo oscuro para los ítems */
+    color: #f9f9f9; /* Color del texto claro */
+    border-radius: 10px;
+    width: 30%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Transición suave para el zoom */
+}
+
+.skill-item:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al hacer hover */
+}
+
+.skill-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.skill-item p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.skill-item .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f7c600; /* Color amarillo para el botón */
+    color: #222; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.skill-item .cta-button:hover {
+    background-color: #f0b700; /* Amarillo más oscuro al pasar el cursor */
+    transform: scale(1.05);
+}
+
+
+
+
+/* Estilos para el formulario de contacto */
+#social-media {
+    padding: 50px;
+    background-color: #222; /* Fondo oscuro para la sección */
+    color: #f9f9f9; /* Color del texto claro */
+    text-align: center;
+}
+
+#social-media h3 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #f9f9f9; /* Color del texto del encabezado claro */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los iconos */
+}
+
+.social-icon {
+    color: #f9f9f9; /* Color de los iconos */
+    font-size: 2em; /* Tamaño de los iconos */
+    transition: color 0.3s ease-in-out; /* Efecto de transición */
+}
+
+.social-icon:hover {
+    color: #f7c600; /* Color amarillo al pasar el cursor */
+}
+
+
+
+/* Estilos para el footer */
+footer {
+    position: relative;
+    background-color: #282828;
+    color: #fff;
+    padding: 20px 0; /* Ajusta el padding superior e inferior */
+    overflow: hidden; /* Asegúrate de que el efecto no se desborde */
+}
+
+/* Asegúrate de que el texto esté encima del efecto */
+footer .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilos para el contenedor de las olas */
+.wave-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px; /* Ajusta la altura de la ola */
+    overflow: hidden;
+    z-index: 1; /* Asegúrate de que el efecto esté detrás del contenido */
+}
+
+/* Efecto de olas */
+.wave {
+    position: absolute;
+    left: 50%;
+    width: 200%;
+    height: 100px; /* Ajusta la altura de la ola */
+    background: linear-gradient(to right, rgba(180, 170, 26, 0.893) 0%, rgba(200, 161, 35, 0.938) 50%, rgb(195, 162, 32) 100%);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: wave 10s linear infinite;
+}
+
+.wave.wave2 {
+    height: 150px; /* Mayor altura para olas más pronunciadas */
+    background: linear-gradient(to right, rgba(142, 133, 15, 0.982) 0%, rgba(215, 182, 35, 0.776) 50%, rgba(255, 226, 59, 0.2) 100%);
+    animation: wave 15s linear infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(20px); /* Mayor desplazamiento vertical para olas más pronunciadas */
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Estilos para alinear el texto y los íconos */
+footer .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Asegúrate de que los elementos estén distribuidos correctamente */
+    position: relative;
+    z-index: 2;
+    text-align: center; /* Centra el texto dentro de cada columna */
+}
+
+footer .col-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido dentro de cada columna */
+}
+
+footer .text-start {
+    text-align: left;
+    flex: 1; /* Ocupa el espacio disponible a la izquierda */
+    padding-left: 20px; /* Espacio adicional a la izquierda */
+}
+
+footer .text-end {
+    text-align: right;
+    flex: 1; /* Ocupa el espacio disponible a la derecha */
+    padding-right: 20px; /* Espacio adicional a la derecha */
+}
+
+footer .text-center {
+    text-align: center;
+    flex: 1; /* Ocupa el espacio central */
+}
+
+footer .text-center i {
+    margin: 0 10px; /* Espacio entre los íconos */
+}
+
+/* Opcional: Estilos para los íconos en el footer */
+footer i {
+    font-size: 1.5em;
+    color: #fff; /* Color blanco para los íconos */
+}
+
+@media (max-width: 768px) {
+    nav {
+        justify-content: space-around; /* Espaciar los elementos de navegación */
+    }
+
+    ul {
+        flex-direction: row; /* Asegurar que los elementos estén en fila */
+        justify-content: center; /* Centrar elementos en la fila */
+    }
+
+    li {
+        flex: 1; /* Hacer que cada elemento ocupe espacio igual */
+    }   
+
+    .skills-grid {
+        display: flex;
+        flex-direction: column; /* Coloca los elementos en columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .skill-item {
+        width: 90%; /* Ajusta el ancho de los elementos */
+        margin: 10px 0; /* Espaciado entre habilidades */
+    }
+
+    .projects-grid {
+        display: flex;
+        flex-direction: column; /* Coloca los proyectos en columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .project-item {
+        width: 90%; /* Ajusta el ancho de los proyectos */
+        margin: 10px 0; /* Espaciado entre proyectos */
+    }
+
+
+    #about-me {
+        padding: 15px;
+    }
+
+    #about-me h2 {
+        font-size: 2.5rem;
+    }
+
+    #about-me p {
+        font-size: 1.2rem;
+    }
+
+    #about-me .cta-button {
+        font-size: 1.5rem;
+        padding: 8px 15px;
+    }
+
+    #about {
+        display: none; /* Ocultar la sección en dispositivos móviles */
+    }
+
+    .visible-images img {
+        width: 60px; /* Tamaño de las imágenes en móviles pequeños */
+        height: auto; /* Mantener la relación de aspecto */
+    }
+
+    #seccion-galeria {
+        padding: 10px; /* Reducir espaciado interno en móviles pequeños */
+    }
+
+
+}
